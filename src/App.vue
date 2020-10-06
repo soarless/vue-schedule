@@ -4,7 +4,7 @@
       <ul>
         <li><i class="fa fa-clock-o"></i>计划板</li>
         <li>首页</li>
-        <li>asd</li>
+        <li>计划列表</li>
       </ul>
     <!-- </div> -->
     <router-view/>
