@@ -1,19 +1,28 @@
 <template>
   <div id="app">
-    <!-- <div class="nav"> -->
-      <ul>
-        <li><i class="fa fa-clock-o"></i>计划板</li>
-        <li>首页</li>
-        <li>计划列表</li>
-      </ul>
-    <!-- </div> -->
-    <router-view/>
+    <ul class="nav">
+      <li><a id="logo" href="#"><i class="fa fa-clock-o"></i>计划板</a></li>
+      <li><router-link to="index">首页</router-link></li>
+      <li><router-link to="list">计划列表</router-link></li>
+    </ul>
+    <div class="content">
+      <div class="sidebar">
+        <sidebar></sidebar>
+      </div>
+      <div class="main">
+        <router-view/>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
+import sidebar from './components/sidebar.vue'
 export default {
-  name: 'App'
+  name: 'App',
+  components: {
+    'sidebar': sidebar
+  }
 }
 </script>
 
@@ -23,21 +32,42 @@ html,body,#app{
   margin:0;
   overflow:hidden;
 }
-.nav {
-  height:20%;
-  margin:0;
-}
 ul {
   margin:0;
   height:10%;
   background-color:#F8F8F8;
-  border-bottom:1px solid #ECECEC;
+  border-bottom:1px solid #DDDDDD;
   display:flex;
   align-items:center;
 }
 li {
-  display:inline;
+  display:inline-block;
   font-size:1.3rem;
+  margin-left:1rem;
   margin-right:1rem;
+}
+li i {
+  margin-right:0.4rem;
+}
+#logo {
+  color:black;
+}
+a {
+  text-decoration:none;
+  color:grey;
+}
+.router-link-active {
+  color:black;
+}
+.content {
+  height:100%;
+  display:flex;
+}
+.sidebar {
+  height:100%;
+  width:30%;
+}
+.main {
+  width:70%;
 }
 </style>
