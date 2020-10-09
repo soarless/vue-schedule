@@ -9,9 +9,7 @@
       <div class="sidebar">
         <sidebar></sidebar>
       </div>
-      <div class="main">
-        <router-view/>
-      </div>
+      <router-view/>
     </div>
   </div>
 </template>
@@ -66,8 +64,7 @@ a {
 .sidebar {
   height:100%;
   width:30%;
-}
-.main {
-  width:70%;
+  padding:20px;
+  box-sizing:border-box;
 }
 </style>

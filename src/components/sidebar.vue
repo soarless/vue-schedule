@@ -4,7 +4,7 @@
       <h2>已有时长</h2>
     </div>
     <div class="side-sum">
-      <h2>6小时</h2>
+      <h2>{{time}}小时</h2>
     </div>
   </div>
 </template>
@@ -16,6 +16,11 @@ export default {
     return {
       msg: 'side'
     }
+  },
+  computed: {
+    time () {
+      return this.$store.state.totalTime
+    }
   }
 }
 </script>
@@ -24,7 +29,6 @@ export default {
 <style scoped>
 .side {
   height:30%;
-  margin:20px;
   box-sizing:border-box;
   border-radius:5px;
   border:1px solid #DDDDDD;
