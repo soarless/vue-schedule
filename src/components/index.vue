@@ -19,7 +19,8 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .index {
-  height:50%;
+  height:40%;
+  width:50%;
   background-color:#F3F3F3;
   margin:20px;
   border-radius:5px;
