@@ -4,7 +4,7 @@
       <div class="plan-item" v-for="(plan,index) in plans" :key="index">
         <div class="plan-avatar">
           <img src="https://blog.soarless.com/wp-content/themes/argon/assets/img/theme/avator.png">
-          <h2>peko</h2>
+          <h2>{{plan.name}}</h2>
         </div>
         <div class="plan-date">
           <div class="date-center">
@@ -13,8 +13,9 @@
           </div>
         </div>
         <div class="plan-content">
-
+          {{plan.comment}}
         </div>
+        <button>X</button>
       </div>
     </div>
   </div>
@@ -39,7 +40,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .main {
-  width:70%;
+  width:75%;
   padding:20px;
   box-sizing:border-box;
 }
@@ -56,9 +57,10 @@ export default {
   box-sizing:border-box;
   display:flex;
   border:1px solid #DDDDDD;
+  position:relative;
 }
 .plan-avatar {
-  width:13rem;
+  /* width:13rem; */
   height:100%;
   background-color:#F8F8F8;
   border-right:1px solid #DDDDDD;
@@ -70,6 +72,11 @@ export default {
   text-align:center;
   display:flex;
   align-items:center;
+  /* display:block; */
+}
+.date-center {
+  display:block;
+  width:10rem;
 }
 .calendar {
   background-color:#0075C2;
@@ -81,6 +88,15 @@ export default {
   box-sizing:border-box;
   text-align:center;
   font-weight:bold;
+}
+.plan-content {
+  box-sizing:border-box;
+  padding:20px;
+  /* display:inline-block; */
+  /* width:auto; */
+  font-size:18px;
+  overflow:auto;
+  margin-right:20px;
 }
 img {
   margin:10px;
@@ -94,10 +110,15 @@ h2 {
   font-size:1.4rem;
 }
 button {
-  background-color:#007bff;
+  background-color:#DC3545;
   color:white;
   border:1px solid transparent;
-  border-radius:1px;
-  font-size:20px;
+  border-radius:5px;
+  font-size:18px;
+  position:absolute;
+  right:10px;
+  top:10px;
+  outline:none;
+  cursor:pointer;
 }
 </style>

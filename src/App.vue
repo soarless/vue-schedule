@@ -63,7 +63,7 @@ a {
 }
 .sidebar {
   height:100%;
-  width:30%;
+  width:25%;
   padding:20px;
   box-sizing:border-box;
 }
