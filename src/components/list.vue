@@ -4,10 +4,13 @@
       <div class="plan-item" v-for="(plan,index) in plans" :key="index">
         <div class="plan-avatar">
           <img src="https://blog.soarless.com/wp-content/themes/argon/assets/img/theme/avator.png">
-          <h2>粽哥</h2>
+          <h2>peko</h2>
         </div>
         <div class="plan-date">
-          <h2><i class="fa fa-clock-o"></i></h2>
+          <div class="date-center">
+            <h2><i class="fa fa-clock-o"></i> {{plan.totalTime}}</h2>
+            <div class="calendar"><i class="fa fa-calendar"></i> {{plan.date}}</div>
+          </div>
         </div>
         <div class="plan-content">
 
@@ -51,6 +54,7 @@ export default {
   border-radius:5px;
   margin:10px;
   box-sizing:border-box;
+  display:flex;
   border:1px solid #DDDDDD;
 }
 .plan-avatar {
@@ -62,8 +66,21 @@ export default {
   display:inline-block;
 }
 .plan-date {
-  height:100%;
-  display:inline-block;
+  padding:20px;
+  text-align:center;
+  display:flex;
+  align-items:center;
+}
+.calendar {
+  background-color:#0075C2;
+  color:white;
+  border:1px solid transparent;
+  border-radius:5px;
+  padding:5px;
+  margin:4px;
+  box-sizing:border-box;
+  text-align:center;
+  font-weight:bold;
 }
 img {
   margin:10px;
@@ -75,5 +92,12 @@ h2 {
   margin:0;
   font-weight:normal;
   font-size:1.4rem;
+}
+button {
+  background-color:#007bff;
+  color:white;
+  border:1px solid transparent;
+  border-radius:1px;
+  font-size:20px;
 }
 </style>
