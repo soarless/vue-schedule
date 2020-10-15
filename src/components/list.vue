@@ -60,7 +60,6 @@ export default {
   position:relative;
 }
 .plan-avatar {
-  /* width:13rem; */
   height:100%;
   background-color:#F8F8F8;
   border-right:1px solid #DDDDDD;
@@ -72,7 +71,6 @@ export default {
   text-align:center;
   display:flex;
   align-items:center;
-  /* display:block; */
 }
 .date-center {
   display:block;
@@ -92,11 +90,9 @@ export default {
 .plan-content {
   box-sizing:border-box;
   padding:20px;
-  /* display:inline-block; */
-  /* width:auto; */
   font-size:18px;
   overflow:auto;
-  margin-right:20px;
+  margin-right:40px;
 }
 img {
   margin:10px;

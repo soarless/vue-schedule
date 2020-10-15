@@ -64,6 +64,7 @@ a {
 .sidebar {
   height:100%;
   width:25%;
+  min-width:15rem;
   padding:20px;
   box-sizing:border-box;
 }
