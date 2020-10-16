@@ -2,8 +2,8 @@
   <div id="app">
     <ul class="nav">
       <li><a id="logo" href="#"><i class="fa fa-clock-o"></i>计划板</a></li>
-      <li><router-link to="index">首页</router-link></li>
-      <li><router-link to="list">计划列表</router-link></li>
+      <li><router-link to="/index">首页</router-link></li>
+      <li><router-link to="/list">计划列表</router-link></li>
     </ul>
     <div class="content">
       <div class="sidebar">
@@ -58,8 +58,9 @@ a {
   color:black;
 }
 .content {
-  height:100%;
+  height:90%;
   display:flex;
+  overflow-y:auto;
 }
 .sidebar {
   height:100%;

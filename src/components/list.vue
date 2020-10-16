@@ -1,9 +1,11 @@
 <template>
   <div class="main">
     <div class="plan-list">
+      <router-link v-if="$route.path !== '/list/add'" class="add-plan" to="/list/add">添加新计划</router-link>
+      <router-view></router-view>
       <div class="plan-item" v-for="(plan,index) in plans" :key="index">
         <div class="plan-avatar">
-          <img src="https://blog.soarless.com/wp-content/themes/argon/assets/img/theme/avator.png">
+          <img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1618065806,14298536&fm=26&gp=0.jpg">
           <h2>{{plan.name}}</h2>
         </div>
         <div class="plan-date">
@@ -41,6 +43,7 @@ export default {
 <style scoped>
 .main {
   width:75%;
+  min-width:650px;
   padding:20px;
   box-sizing:border-box;
 }
@@ -93,6 +96,15 @@ export default {
   font-size:18px;
   overflow:auto;
   margin-right:40px;
+}
+.add-plan {
+  background-color:#007BFF;
+  margin:10px;
+  padding:10px;
+  color:white;
+  border-radius:5px;
+  display:inline-block;
+  /* font-weight:bold; */
 }
 img {
   margin:10px;

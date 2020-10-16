@@ -29,6 +29,7 @@ export default {
 <style scoped>
 .side {
   height:30%;
+  min-height:10rem;
   box-sizing:border-box;
   border-radius:5px;
   border:1px solid #DDDDDD;

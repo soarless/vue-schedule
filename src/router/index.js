@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import list from '@/components/list'
 import index from '@/components/index'
+import add from '@/components/add'
 
 Vue.use(Router)
 
@@ -20,7 +21,12 @@ export default new Router({
     {
       path: '/list',
       name: 'list',
-      component: list
+      component: list,
+      children: [{
+        path: 'add',
+        name: 'add',
+        component: add
+      }]
     }
   ]
 })

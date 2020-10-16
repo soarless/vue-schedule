@@ -16,6 +16,18 @@ const state = {
     date: '2016-12-25',
     totalTime: '6',
     comment: '12月25日，玩手机玩了6个小时'
+  },
+  {
+    name: 'asd',
+    date: '2016-12-25',
+    totalTime: '6',
+    comment: '12月25日，玩手机玩了6个小时'
+  },
+  {
+    name: 'asd',
+    date: '2016-12-25',
+    totalTime: '6',
+    comment: '12月25日，玩手机玩了6个小时'
   }
   ]
 }
