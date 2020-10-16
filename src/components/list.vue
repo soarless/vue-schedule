@@ -17,7 +17,7 @@
         <div class="plan-content">
           {{plan.comment}}
         </div>
-        <button>X</button>
+        <button @click="deletePlan(index)">X</button>
       </div>
     </div>
   </div>
@@ -34,6 +34,12 @@ export default {
   computed: {
     plans () {
       return this.$store.state.list
+    }
+  },
+  methods: {
+    deletePlan (index) {
+      this.$store.dispatch('dectime', this.plans[index].totalTime)
+      this.$store.dispatch('deletePlan', index)
     }
   }
 }

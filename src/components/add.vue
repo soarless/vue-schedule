@@ -4,20 +4,20 @@
     <div class="data">
       <div class="data-left">
         <div class="data-line">
-          <label>名称</label><input type="text" placeholder="text">
+          <label>名称</label><input type="text" v-model="name" placeholder="text">
         </div>
         <div class="data-line">
-          <label>时间</label><input type="number" placeholder="time">
+          <label>时间</label><input type="number" v-model.number="totalTime" placeholder="time">
         </div>
         <div class="data-line">
-          <label>日期</label><input type="date" placeholder="date">
+          <label>日期</label><input type="date" v-model="date" placeholder="date">
         </div>
       </div>
       <div class="data-right">
-        <label>内容</label><input type="text" placeholder="comment">
+        <label>内容</label><textarea type="text" v-model="comment" placeholder="comment"></textarea>
       </div>
     </div>
-    <button>添加</button>
+    <button @click="save()">添加</button>
     <router-link to="/list">取消</router-link>
   </div>
 </template>
@@ -27,7 +27,23 @@ export default {
   name: 'add',
   data () {
     return {
-      msg: 'Welcome to index'
+      name: '',
+      totalTime: '',
+      date: '',
+      comment: ''
+    }
+  },
+  methods: {
+    save () {
+      const plan = {
+        name: this.name,
+        date: this.date,
+        totalTime: this.totalTime,
+        comment: this.comment
+      }
+      this.$store.dispatch('savePlan', plan)
+      this.$store.dispatch('addtime', this.totalTime)
+      this.$router.go(-1)
     }
   }
 }
@@ -48,14 +64,15 @@ export default {
   display:flex;
 }
 .data-left {
-  width:50%;
+  margin-right:4rem;
 }
 .data-line {
-  /* display:block; */
   margin:5px;
 }
-.data-right {
-  /* width:50%; */
+textarea {
+  resize:none;
+  display:block;
+  height:6rem !important;
 }
 a {
   background-color:#DC3545;
