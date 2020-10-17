@@ -104,7 +104,7 @@ export default {
   margin-right:40px;
 }
 .add-plan {
-  background-color:#007BFF;
+  background-color:#0075C2;
   margin:10px;
   padding:10px;
   color:white;

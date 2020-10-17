@@ -93,7 +93,7 @@ input {
   width:10rem;
 }
 button {
-  background-color:#007BFF;
+  background-color:#0075C2;
   color:white;
   border:2px solid transparent;
   border-radius:5px;
